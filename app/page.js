@@ -1,69 +1,179 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+  import styles from "./page.module.css";
+  import { CALENDLY_URL as CALENDLY } from "./config";
+  import Newsletter from "./Newsletter";
+  import Link from "next/link";
 
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.js</code> file.
-          </h1>
+  function Cta() {
+    return (
+      <p>
+        <a href={CALENDLY}>Записаться на бесплатное пробное занятие</a>
+      </p>
+    );
+  }
+
+  export default function Home() {
+    return (
+      <main className={styles.page}>
+        <section id="hero" className={styles.hero}>
+          <p>Loam</p>
+          <h1>Говори по-английски, а не только понимай</h1>
+          <Cta />
+          <p>↓</p>
+        </section>
+
+        <section id="uznaesh-sebya">
+          <h2>Узнаешь себя?</h2>
           <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
+            Ты знаешь слова. Ты даже знаешь, как в голове строится вопрос. Но
+            когда приходит момент спросить, где туалет, или заказать кофе с
+            другим молоком, всё куда-то исчезает.
           </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+          <p>
+            Ты учишь слова. Когда их говорят другие, ты понимаешь: «Да это же я
+            знаю!» А когда нужно вспомнить самому, в голове пусто. Зато стоит
+            кому-то сказать это вслух, и ты сразу вспоминаешь.
+          </p>
+          <p>
+            Тебе хочется разговаривать, когда путешествуешь. Ты понимаешь, что
+            английский нужен и что он правда может улучшить твою жизнь.
+          </p>
+          <p>
+            Узнать слово и произнести его самому — это два разных навыка. На
+            занятиях мы тренируем второй.
+          </p>
+          <Cta />
+        </section>
+
+        <section id="kak-ya-prepodayu">
+          <h2>Как я преподаю</h2>
+          <p>
+            Как думаешь, сколько слов нужно, чтобы понимать 85% разговорного
+            английского? По исследованиям Пола Нэйшена, около 1000. С них мы и
+            начинаем.
+          </p>
+          <p>
+            Я создала интерактивную карту этих слов. Она устроена по уровням, и
+            в каждом шестиугольнике по 6 слов.
+          </p>
+          <ol>
+            <li>Слова. Читаем слова и их перевод.</li>
+            <li>Предложение. Учим готовое предложение внутри контекста.</li>
+            <li>
+              Тип предложения. Разбираем, какие ещё слова из тысячи можно в него
+              подставить. Это как капсульный гардероб.
+            </li>
+            <li>
+              Микро-навыки. В каждом предложении спрятан набор маленьких
+              грамматических навыков.
+            </li>
+          </ol>
+          <p>
+            Дальше ты повторяешь. Я задаю вопрос, ты пробуешь составить
+            предложение сам. Вместе смотрим, сколько процентов микро-навыков ты
+            уже набрал.
+          </p>
+          <p>
+            Пассивно: читаешь, узнаёшь, осознаёшь, принимаешь. Активно:
+            произносишь готовое предложение вслух, слышишь мой вопрос и
+            отвечаешь.
+          </p>
+          <Cta />
+        </section>
+
+        <section id="dlya-kogo">
+          <h2>Для кого занятия?</h2>
+          <p>На каждом уровне разные задачи.</p>
+          <h3>A0</h3>
+          <p>
+            Твой английский остановился на «London is the capital of Great
+            Britain». Одна из лучших ситуаций для работы по моему методу. Всё
+            учится по-новому, и нет привычек из школьной программы
+            постсоветского пространства. Упор на словарь.
+          </p>
+          <h3>A1–A2</h3>
+          <p>
+            Знаешь какую-то базу, возможно, можешь выжить в разных контекстах:
+            заказать, заселиться, спросить. Но не хватает уверенности, и хочется
+            расширять словарь и говорить грамотно. Набираем типы предложений и
+            учимся вести себя в жизненных ситуациях: аэропорт, отель, ресторан,
+            больница, полиция, разговор на базовые темы.
+          </p>
+          <h3>B1–B2</h3>
+          <p>
+            В принципе говоришь, может, даже смотришь фильмы и понимаешь сериал
+            «Друзья». Но не хватает беглости, не получается выразить мнение и
+            пошутить. Если бы все знали, какое у тебя чувство юмора на русском!
+            Часто не знаешь другие значения базовых фраз и фразовых глаголов.
+            Например, отказаться можно, сказав «I'm good». Тоже идём по карте,
+            но с упором на фразы и фразовые глаголы. Диагностируем и восполняем
+            пробелы.
+          </p>
+          <h3>C1+</h3>
+          <p>
+            Напиши мне по почте. Цели могут быть разными, и мне нужно понять,
+            подхожу ли я тебе как репетитор.
+          </p>
+          <Cta />
+        </section>
+
+        <section id="otzyvy">
+          <h2>Отзывы</h2>
+          <p>[Здесь будут настоящие отзывы студентов — с их разрешения.]</p>
+        </section>
+
+        <section id="tseny">
+          <h2>Цены</h2>
+          <p>Пробное занятие: бесплатно.</p>
+          <p>
+            Познакомимся, ты расскажешь о своих целях, и мы определим твой
+            уровень. Я подробнее расскажу о своём подходе и покажу приложение с
+            картой.
+          </p>
+          <p>Стандартная цена: 25 £ за занятие (50 минут).</p>
+          <p>
+            Для первых 6 студентов: 20 £ за занятие, если ты записываешься сразу
+            на пакет из 8 занятий. Эта цена фиксируется на год.
+          </p>
+          <p>
+            Приложение включено для всех студентов. В нём мы отслеживаем твой
+            словарный запас.
+          </p>
+          <Cta />
+        </section>
+
+        <section id="faq">
+          <h2>Частые вопросы</h2>
+          <h3>Что нужно подготовить к пробному уроку?</h3>
+          <p>
+            Ничего! Достаточно включить камеру, рассказать о себе и поделиться
+            своими целями.
+          </p>
+          <h3>Есть ли возвраты?</h3>
+          <p>
+            Да. В течение 14 дней можно вернуть деньги за неиспользованные
+            занятия, без вопросов и объяснений. Подробнее в <Link href="/terms">Условиях</Link>.
+          </p>
+          <h3>Кто твой преподаватель?</h3>
+          <p>[Обо мне: 3-4 предложения.]</p>
+          <p>[Остальные вопросы добавим позже.]</p>
+        </section>
+
+        <section id="svyazatsya">
+          <h2>Связаться</h2>
+          <p>
+            <a href={CALENDLY}>Записаться на бесплатное пробное занятие</a>
+          </p>
+          <p>Почта: [твой адрес]</p>
+        </section>
+
+        <footer>
+    <Newsletter/>
+            <p>
+    <Link href="/terms">Условия</Link> ·{" "}
+    <Link href="/privacy">Конфиденциальность</Link>
+  </p>
+          <p>© 2026 Loam</p>
+        </footer>
       </main>
-    </div>
-  );
-}
+    );
+  }
