@@ -528,7 +528,7 @@ function Clip({ max, children }) {
       </div>
       {!short && (
         <button className="more" type="button" aria-expanded={open} onClick={toggle}>
-          {open ? 'Свернуть' : 'Читать полностью'}
+          {open ? 'Свернуть' : 'Читать полностью '}
         </button>
       )}
     </>
@@ -563,6 +563,103 @@ const INTERVIEW = [
 
 const AMIR_TEXT =
   'Благодаря занятием с Мариям я преодолел барьер в разговорной речи. Мне кажется, этому помогла дружелюбная атмосфера и сам подход к обучению. Теперь я могу общаться с англоговорящими людьми вслушиваюсь в их речь, вставляю слово в разговор и отвечаю развернуто. Больше не боюсь говорить и для меня это главный результат. Мариям помогла мне освоить навыки в правильном порядке и я начал ими пользоваться. Мне нравится, что новая грамматика и слова даются в контексте и мы разговариваем на разные темы и я применяю то, что узнал. Я очень рекомендую Мариям, на ее занятиях очень крутая и дружелюбная атмосфера, которая дает уверенность и понимание того, как нужно изучать английский.';
+
+const REVIEWS = [
+  { name: 'Амир', country: 'Казахстан', text: AMIR_TEXT },
+  
+  {
+    name: 'Алиса', country: 'Португалия',
+    text: 'Мариям — лучший преподаватель, которого я когда-либо встречала! Она внимательно прислушивается к потребностям учеников, предлагает продуманный план урока и находит индивидуальный подход. На её занятиях всегда комфортная и поддерживающая атмосфера, которая пробуждает желание учиться и расти. Благодаря её поддержке и профессионализму я чувствую себя увереннее в своих знаниях. Кроме того, её позитивная энергия и отличное чувство юмора делают каждый урок увлекательным и вдохновляющим. Я с нетерпением жду каждого занятия! Спасибо, Мариям!',
+    original: `Mariyam is the best teacher I have ever met! She listens carefully to the needs of her students, offers a well-thought-out lesson plan, and finds an individual approach. Her classes always have a comfortable and encouraging atmosphere that makes you want to learn and grow. Thanks to her support and professionalism, I feel more confident in my knowledge. Moreover, her positive energy and great sense of humor make every lesson engaging and inspiring. I look forward to every class! Thank you, Mariyam!`,
+  },
+  {
+    name: 'Марта', country: 'Польша',
+    text: 'Я занимаюсь с Мариям, чтобы улучшить свой академический английский. Она прекрасный преподаватель языка, необходимого в университете, на конференциях и в научных статьях. Она невероятно креативна и очень эрудирована. Особенно важно для меня то, что Мариям заботится о правильности, уместности и изяществе языка. Никогда прежде английский не приносил мне столько удовлетворения. Наконец-то я двигаюсь вперёд!',
+    original: `I am working with Mariyam to improve my academic English. She is a great teacher of the language needed at university, at conferences, in academic papers. She is incredibly creative and very knowledgeable. What is particularly important to me, Mariyam cares about the correctness, appropriateness and elegance of the language. Never before has English given me so much satisfaction. I am finally moving forward!`,
+  },
+  {
+    name: 'Кристина', country: 'Украина',
+    text: 'Мне очень понравились занятия с Мариям. С ней легко разговаривать, а наши беседы охватывали самые разные темы — от повседневной жизни до более глубоких обсуждений. Больше всего я ценила то, что она часто делилась естественными выражениями, которыми пользуются носители языка, и помогала мне говорить увереннее. Если вы ищете разговорную практику с обратной связью в реальном времени, уроки Мариям вам отлично подойдут. Думаю, они особенно полезны для развития речи и расширения словарного запаса в спокойной, дружелюбной атмосфере.',
+    original: `I’ve really enjoyed my lessons with Mariyam. She’s easy to talk to, and our conversations covered a wide range of topics — from everyday life to deeper discussions. One of the things I appreciated most was that she often shared natural, native-like expressions and helped me sound more confident. If you’re looking for conversational practice with real-time feedback, Mariam’s lessons are a great fit. I think they’re especially useful for improving your speaking skills and expanding your vocabulary in a relaxed, friendly way.`,
+  },
+  {
+    name: 'Якопо', country: 'Италия',
+    text: 'Найти увлечённого, преданного делу и компетентного преподавателя — большая редкость. Занятия подстраиваются под ваши конкретные потребности и уровень, но самое главное — она очень инициативна и прекрасно организована. Лучшего я и желать не мог!',
+    original: `Finding a passionate, dedicated, and competent teacher is rare. Classes are tailored to your specific needs and skill level, but most importantly, she is extremely proactive and well-organized. I couldn't have asked for better!`,
+  },
+  {
+    name: 'Инес', country: 'Испания',
+    text: 'Я занимаюсь с Мариям уже полгода, и благодаря ей мой уровень английского вырос. Её уроки всегда увлекательные: мы говорим на интересные темы, и она последовательно исправляет мои ошибки так, что это действительно помогает. Она также даёт отличные советы о том, как и дальше улучшать грамматику и словарный запас. Мариям весёлая, очень организованная и по-настоящему предана своим ученикам. Я на 100% рекомендую её всем, кто хочет добиться реального прогресса в английском.',
+    original: `I’ve been taking lessons with Mariyam for six months, and thanks to her, I’ve improved my English level. Her classes are always engaging — we talk about interesting topics, and she corrects me consistently in a helpful way. She also gives great advice on how to keep improving my grammar and vocabulary. Mariyam is fun, very organized, and truly committed to her students. I would 100% recommend her to anyone who wants to make real progress in English.`,
+  },
+  {
+    name: 'Озде', country: 'Турция',
+    text: 'У Мариям прекрасная энергетика, и она очень мотивирует на прогресс. Занятия с ней доставляют огромное удовольствие — как будто болтаешь с подругой.',
+    original: `Mariyam has a beautiful energy and is very motivating in your progress, my lessons with her are very enjoyable as if I am chatting with a friend.`,
+  },
+  {
+    name: 'Арзу', country: 'Азербайджан',
+    text: 'Я очень рекомендую учительницу Мариям по английскому языку, потому что у неё замечательный подход к обучению, занятия всегда проходят интересные и я действительно почувствовала прогресс в своём уровне языка.',
+  },
+  {
+    name: 'Дария', country: 'Украина',
+    text: 'Мне очень нравятся занятия с Мариям! У неё очень индивидуальный подход, а уроки всегда лёгкие и весёлые. Там много разговорной практики — именно то, что я искала. Я уже чувствую себя увереннее, когда говорю! 💬✨',
+    original: `I really enjoy my lessons with Mariyam! She has a very individual approach, and the lessons are always easy-going and fun. There’s a lot of speaking practice, which is exactly what I was looking for. I can already feel more confident when I speak! 💬✨`,
+  },
+  {
+    name: 'Габриела', country: 'Словакия',
+    text: 'Мариям — очень профессиональный, системный и терпеливый преподаватель. Я очень довольна обучением.',
+    original: `Mariyam is very professional, systematic and patient. I am very satisfied with the teaching`,
+  },
+  {
+    name: 'Наталия', country: 'Беларусь',
+    text: 'Мариям — очень приятная и жизнерадостная учительница. Она много улыбается и делится мемами, благодаря чему уроки становятся веселее 😊. Она выбирает темы, которые соответствуют вашим интересам, поэтому на её уроках всегда комфортно. Учиться с ней — большое удовольствие!',
+    original: `Mariyam is a very pleasant and cheerful teacher. She smiles a lot and shares memes, which makes the lessons more fun😊. She chooses topics that match your interests, so her lessons are always comfortable. Learning with her is a very enjoyable experience!`,
+  },
+  {
+    name: 'Катя', country: 'Россия',
+    text: 'Я занимаюсь с Мариям уже месяц и точно вижу прогресс. Наши уроки очень весёлые, лёгкие и продуктивные! Я наслаждаюсь каждым занятием.',
+    original: `I’ve been studying with Mariyam for a month now, and I can definitely see the progress. Our lessons are very fun, light and productive! I am enjoying every lesson`,
+  },
+  {
+    name: 'Анна', country: 'Польша',
+    text: 'Я очень рекомендую Мариям как преподавателя английского. Она говорит очень чётко, поэтому уроки легко следовать и понимать. Она также терпелива и профессиональна. Она следит за тем, чтобы каждый ученик делал успехи.',
+    original: `I highly recommend Mariyam as an English teacher. She speaks very clearly, making lessons easy to follow and understand. She is also patient and professional. I am ensuring that each student makes progress.`,
+  },
+];
+
+function ReviewCard({ name, country, text, original }) {
+  const [showOriginal, setShowOriginal] = useState(false);
+
+  return (
+    <article className="rcard">
+      <header className="who">
+        <span className="avatar">{name[0]}</span>
+        <div>
+          <div className="name">{name}</div>
+          <div className="country">{country}</div>
+        </div>
+      </header>
+      {/* key remounts the clip so "Читать полностью" re-measures the new text */}
+      <Clip key={showOriginal ? 'original' : 'ru'} max={190}>
+        <p className="text" lang={showOriginal ? 'en' : undefined}>
+          {showOriginal ? original : text}
+        </p>
+      </Clip>
+      {original && (
+        <div style={{ marginTop: 10 }}>
+          <button
+            className="more"
+            type="button"
+            onClick={() => setShowOriginal((v) => !v)}
+          >
+            {showOriginal ? 'Показать перевод' : 'Показать оригинал'}
+          </button>
+        </div>
+      )}
+    </article>
+  );
+}
 
 function Reviews() {
   const trackRef = useRef(null);
@@ -630,23 +727,8 @@ function Reviews() {
         </div>
 
         <div className="track" ref={trackRef}>
-          <article className="rcard">
-            <header className="who">
-              <span className="avatar">А</span>
-              <div>
-                <div className="name">Амир</div>
-                <div className="country">Казахстан</div>
-              </div>
-            </header>
-            <Clip max={190}>
-              <p className="text">{AMIR_TEXT}</p>
-            </Clip>
-          </article>
-
-          {[0, 1, 2].map((i) => (
-            <div className="rcard placeholder" aria-hidden="true" key={i}>
-              Здесь появится следующий отзыв
-            </div>
+          {REVIEWS.map((r) => (
+            <ReviewCard key={r.name} {...r} />
           ))}
         </div>
       </div>
