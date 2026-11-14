@@ -8,8 +8,14 @@ import { CALENDLY_TRIAL_URL as CALENDLY } from "./config";
 /* ================================================================
    Things you edit by hand
    ================================================================ */
-const CALENDLY_URL = '#';        // TODO: your Calendly link (every "записаться на пробный урок" button)
-const CONTACT_URL = '#';         // TODO: email or messenger link for "Написать мне"
+const CALENDLY_URL = 'https://calendly.com/loam-app/english-class';
+const CONTACT_EMAIL = 'info@loamenglish.com';
+const mailto = (subject) =>
+  `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}`;
+const CONTACT_URL = mailto('Хочу заниматься английским C1+');   // "Написать мне" buttons
+const CONTACT_URL_FOOTER = mailto('У меня вопрос');        // footer link
+const PRIVACY_URL = '/privacy';
+const TERMS_URL = '/terms';
 const VIDEO_ID = 'YOUTUBE_VIDEO_ID'; // TODO: the part after v= in the YouTube link
 const FOUNDER_TOTAL = 6;         // places in the Founder offer
 const FOUNDER_TAKEN = 1;         // how many students have already joined
@@ -842,12 +848,12 @@ function Pricing() {
       <div className="plans">
         <article className="plan">
           <div className="plan-head"><span className="plan-name">Стандартный пакет</span></div>
-          <div className="price"><span className="num">30 £</span><span className="per">за занятие</span></div>
+          <div className="price"><span className="num">£30</span><span className="per">за занятие</span></div>
           <ul>
             <li>От 4 занятий в пакете</li>
             <li>Пакет действует 28 дней</li>
           </ul>
-          <p className="total">4 занятия = 120 £</p>
+          <p className="total">4 занятия = £120</p>
         </article>
 
         <article className="plan founder">
@@ -855,7 +861,7 @@ function Pricing() {
             <span className="plan-name">Founder · основатели</span>
             <span className="badge">для первых 6 студентов</span>
           </div>
-          <div className="price"><span className="num">25 £</span><span className="per">за занятие</span></div>
+          <div className="price"><span className="num">£25 </span><span className="per">за занятие</span></div>
           <p className="spots"><span className="dot" /><span>{spotsText}</span></p>
           <p className="why">Я запускаю приложение, поэтому первым шестерым студентам предлагаю особую цену. Вы станете основателями Loam.</p>
           <ul>
@@ -863,7 +869,7 @@ function Pricing() {
             <li>Пакет действует 28 дней</li>
             <li>Цена фиксируется на год</li>
           </ul>
-          <p className="total">8 занятий = 200 £<span className="saving">экономия 40 £ на пакете</span></p>
+          <p className="total">8 занятий = £200 <span className="saving">экономия £40 на пакете</span></p>
         </article>
       </div>
 
@@ -881,7 +887,10 @@ function Pricing() {
       </div>
 
       <p className="fineprint">
-        <span className="np">а если не подойдёт?</span> вернем деньги за неиспользованные занятия в течение 14 дней · подробнее в <a href="#">условиях обучения</a>
+        <span className="np">а если не подойдёт?</span> вернем деньги за неиспользованные занятия в течение 14 дней · подробнее в{' '}
+<a href={TERMS_URL} style={{ textDecoration: 'underline' }}>
+  условиях обучения
+</a>
       </p>
     </section>
   );
@@ -892,10 +901,26 @@ function Pricing() {
    ================================================================ */
 const FAQ = [
   { q: 'Что нужно подготовить к пробному уроку?', a: 'Ничего! Достаточно включить камеру, рассказать о себе и поделиться своими целями.' },
-  { q: 'Сколько стоит занятие?', a: '30 £ за занятие. Минимальный пакет: 4 занятия.' },
-  { q: 'Что за предложение Founder для 6 студентов?', a: 'Я запускаю приложение, поэтому первым 6 студентам предлагаю особую цену: вы становитесь основателями. Пакет из 8 занятий по 25 £ вместо 30 £. Эта цена фиксируется на 365 дней со дня оплаты. Чтобы её активировать, нужен промокод, который я отправлю при регистрации.' },
+  { q: 'Сколько стоит занятие?', a: '£30 за занятие. Минимальный пакет: 4 занятия.' },
+  { q: 'Что за предложение Founder для 6 студентов?', a: 'Я запускаю приложение, поэтому первым 6 студентам предлагаю особую цену: вы становитесь основателями. Пакет из минимум 8 занятий по £25 вместо £30. Эта цена фиксируется на 365 дней со дня оплаты. Чтобы её активировать, нужен промокод, который я отправлю при регистрации.' },
   { q: 'Как проходят занятия?', a: 'Онлайн в Zoom, по 50 минут.' },
-  { q: 'Как записаться на занятие?', a: 'Через Calendly. Перенести или отменить занятие можно там же, либо договориться со мной в WhatsApp или Telegram. После оплаты можно закрепить за собой постоянное время в моём расписании.' },
+  {
+  q: 'Как записаться на занятие?',
+  a: (
+    <>
+      Через{' '}
+      <a
+        href={CALENDLY_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{ textDecoration: 'underline' }}
+      >
+        Calendly
+      </a>
+      . Перенести или отменить занятие можно там же, либо договориться со мной в WhatsApp или Telegram. После оплаты можно закрепить за собой постоянное время в моём расписании.
+    </>
+  ),
+},
   { q: 'Как долго действует пакет?', a: '28 дней с даты оплаты. Неиспользованные занятия после этого сгорают.' },
   { q: 'Можно ли перенести неиспользованные занятия в следующий пакет?', a: 'Да, частично. Если ты оплачиваешь следующий пакет в последний день действия текущего, 50% неиспользованных занятий переходят в новый пакет. Для этого не должно быть задолженностей.' },
   { q: 'Можно ли заморозить пакет?', a: 'Да, один раз за пакет, до 7 календарных дней. Срок действия пакета продлевается на дни заморозки, а занятия в это время не проводятся и не списываются.' },
@@ -904,7 +929,11 @@ const FAQ = [
     q: 'Есть ли возвраты?',
     a: (
       <>
-        Да. В течение 14 дней со дня оплаты первого пакета можно вернуть деньги за неиспользованные занятия. Проведённые занятия не возвращаются. Подробнее в <a href="#">Условиях обучения</a>.
+        Да. В течение 14 дней со дня оплаты первого пакета можно вернуть деньги за неиспользованные занятия. Проведённые занятия не возвращаются. Подробнее в{' '}
+<a href={TERMS_URL} style={{ textDecoration: 'underline' }}>
+  Условиях обучения
+</a>
+.
       </>
     ),
   },
@@ -1202,10 +1231,9 @@ export default function Home() {
         <div className="footer-inner">
           <span className="footer-copy">© Loam 2026</span>
           <nav className="footer-links" aria-label="Документы и контакты">
-            {/* TODO: point each link at its real page */}
-            <a href="/terms">Условия обучения</a>
-            <a href="/privacy">Политика конфиденциальности</a>
-            <a href="#">Связаться с нами</a>
+           <a href={TERMS_URL}>Условия обучения</a>
+<a href={PRIVACY_URL}>Политика конфиденциальности</a>
+            <a href={CONTACT_URL_FOOTER}>Cвязаться с нами</a>
           </nav>
         </div>
       </footer>
