@@ -566,10 +566,15 @@ const AMIR_TEXT =
 
 const REVIEWS = [
   { name: 'Амир', country: 'Казахстан', text: AMIR_TEXT },
+
+  {
+    name: 'Екатерина', country: 'Россия',
+    text: 'Мне нравятся занятия с Мариам тем, что она легко и бережно преподносит информацию. Огромный плюс, что она понимает Русскую культуру и культуру англоязычных стран. Я начала учить Английский язык еще в школе, потом начала в колледже и вновь начала в институте… какие-То знания безусловно были, но в них не было системы и были огромные дыры на базовом уровне. Так же сложность вызывали артикли и предлоги не характерные Русскому языку. Вот с этим собственно я и пришла к Мариам, и с желанием наконец-то начать говорить и с мечтой переехать заграницу) Я точно рекомендую занятия с Мариам, если вы хотите наконец перестать бояться и начать говорить на Английском!!!',
+  },
   
   {
     name: 'Алиса', country: 'Португалия',
-    text: 'Мариям — лучший преподаватель, которого я когда-либо встречала! Она внимательно прислушивается к потребностям учеников, предлагает продуманный план урока и находит индивидуальный подход. На её занятиях всегда комфортная и поддерживающая атмосфера, которая пробуждает желание учиться и расти. Благодаря её поддержке и профессионализму я чувствую себя увереннее в своих знаниях. Кроме того, её позитивная энергия и отличное чувство юмора делают каждый урок увлекательным и вдохновляющим. Я с нетерпением жду каждого занятия! Спасибо, Мариям!',
+    text: 'Мариям - лучший преподаватель, которого я когда-либо встречала! Она внимательно прислушивается к потребностям учеников, предлагает продуманный план урока и находит индивидуальный подход. На её занятиях всегда комфортная и поддерживающая атмосфера, которая пробуждает желание учиться и расти. Благодаря её поддержке и профессионализму я чувствую себя увереннее в своих знаниях. Кроме того, её позитивная энергия и отличное чувство юмора делают каждый урок увлекательным и вдохновляющим. Я с нетерпением жду каждого занятия! Спасибо, Мариям!',
     original: `Mariyam is the best teacher I have ever met! She listens carefully to the needs of her students, offers a well-thought-out lesson plan, and finds an individual approach. Her classes always have a comfortable and encouraging atmosphere that makes you want to learn and grow. Thanks to her support and professionalism, I feel more confident in my knowledge. Moreover, her positive energy and great sense of humor make every lesson engaging and inspiring. I look forward to every class! Thank you, Mariyam!`,
   },
   {
@@ -579,22 +584,22 @@ const REVIEWS = [
   },
   {
     name: 'Кристина', country: 'Украина',
-    text: 'Мне очень понравились занятия с Мариям. С ней легко разговаривать, а наши беседы охватывали самые разные темы — от повседневной жизни до более глубоких обсуждений. Больше всего я ценила то, что она часто делилась естественными выражениями, которыми пользуются носители языка, и помогала мне говорить увереннее. Если вы ищете разговорную практику с обратной связью в реальном времени, уроки Мариям вам отлично подойдут. Думаю, они особенно полезны для развития речи и расширения словарного запаса в спокойной, дружелюбной атмосфере.',
-    original: `I’ve really enjoyed my lessons with Mariyam. She’s easy to talk to, and our conversations covered a wide range of topics — from everyday life to deeper discussions. One of the things I appreciated most was that she often shared natural, native-like expressions and helped me sound more confident. If you’re looking for conversational practice with real-time feedback, Mariam’s lessons are a great fit. I think they’re especially useful for improving your speaking skills and expanding your vocabulary in a relaxed, friendly way.`,
+    text: 'Мне очень понравились занятия с Мариям. С ней легко разговаривать, а наши беседы охватывали самые разные темы, от повседневной жизни до более глубоких обсуждений. Больше всего я ценила то, что она часто делилась естественными выражениями, которыми пользуются носители языка, и помогала мне говорить увереннее. Если вы ищете разговорную практику с обратной связью в реальном времени, уроки Мариям вам отлично подойдут. Думаю, они особенно полезны для развития речи и расширения словарного запаса в спокойной, дружелюбной атмосфере.',
+    original: `I’ve really enjoyed my lessons with Mariyam. She’s easy to talk to, and our conversations covered a wide range of topics, from everyday life to deeper discussions. One of the things I appreciated most was that she often shared natural, native-like expressions and helped me sound more confident. If you’re looking for conversational practice with real-time feedback, Mariam’s lessons are a great fit. I think they’re especially useful for improving your speaking skills and expanding your vocabulary in a relaxed, friendly way.`,
   },
   {
-    name: 'Якопо', country: 'Италия',
-    text: 'Найти увлечённого, преданного делу и компетентного преподавателя — большая редкость. Занятия подстраиваются под ваши конкретные потребности и уровень, но самое главное — она очень инициативна и прекрасно организована. Лучшего я и желать не мог!',
+    name: 'Джакопо', country: 'Италия',
+    text: 'Найти увлечённого, преданного делу и компетентного преподавателя - большая редкость. Занятия подстраиваются под ваши конкретные потребности и уровень, но самое главное она очень инициативна и прекрасно организована. Лучшего я и желать не мог!',
     original: `Finding a passionate, dedicated, and competent teacher is rare. Classes are tailored to your specific needs and skill level, but most importantly, she is extremely proactive and well-organized. I couldn't have asked for better!`,
   },
   {
     name: 'Инес', country: 'Испания',
     text: 'Я занимаюсь с Мариям уже полгода, и благодаря ей мой уровень английского вырос. Её уроки всегда увлекательные: мы говорим на интересные темы, и она последовательно исправляет мои ошибки так, что это действительно помогает. Она также даёт отличные советы о том, как и дальше улучшать грамматику и словарный запас. Мариям весёлая, очень организованная и по-настоящему предана своим ученикам. Я на 100% рекомендую её всем, кто хочет добиться реального прогресса в английском.',
-    original: `I’ve been taking lessons with Mariyam for six months, and thanks to her, I’ve improved my English level. Her classes are always engaging — we talk about interesting topics, and she corrects me consistently in a helpful way. She also gives great advice on how to keep improving my grammar and vocabulary. Mariyam is fun, very organized, and truly committed to her students. I would 100% recommend her to anyone who wants to make real progress in English.`,
+    original: `I’ve been taking lessons with Mariyam for six months, and thanks to her, I’ve improved my English level. Her classes are always engaging. We talk about interesting topics, and she corrects me consistently in a helpful way. She also gives great advice on how to keep improving my grammar and vocabulary. Mariyam is fun, very organized, and truly committed to her students. I would 100% recommend her to anyone who wants to make real progress in English.`,
   },
   {
     name: 'Озде', country: 'Турция',
-    text: 'У Мариям прекрасная энергетика, и она очень мотивирует на прогресс. Занятия с ней доставляют огромное удовольствие — как будто болтаешь с подругой.',
+    text: 'У Мариям прекрасная энергетика, и она очень мотивирует на прогресс. Занятия с ней доставляют огромное удовольствие, как будто болтаешь с подругой.',
     original: `Mariyam has a beautiful energy and is very motivating in your progress, my lessons with her are very enjoyable as if I am chatting with a friend.`,
   },
   {
@@ -603,17 +608,17 @@ const REVIEWS = [
   },
   {
     name: 'Дария', country: 'Украина',
-    text: 'Мне очень нравятся занятия с Мариям! У неё очень индивидуальный подход, а уроки всегда лёгкие и весёлые. Там много разговорной практики — именно то, что я искала. Я уже чувствую себя увереннее, когда говорю! 💬✨',
+    text: 'Мне очень нравятся занятия с Мариям! У неё очень индивидуальный подход, а уроки всегда лёгкие и весёлые. Там много разговорной практики! именно то, что я искала. Я уже чувствую себя увереннее, когда говорю! 💬✨',
     original: `I really enjoy my lessons with Mariyam! She has a very individual approach, and the lessons are always easy-going and fun. There’s a lot of speaking practice, which is exactly what I was looking for. I can already feel more confident when I speak! 💬✨`,
   },
   {
     name: 'Габриела', country: 'Словакия',
-    text: 'Мариям — очень профессиональный, системный и терпеливый преподаватель. Я очень довольна обучением.',
+    text: 'Марьям очень профессиональный, системный и терпеливый преподаватель. Я очень довольна обучением.',
     original: `Mariyam is very professional, systematic and patient. I am very satisfied with the teaching`,
   },
   {
     name: 'Наталия', country: 'Беларусь',
-    text: 'Мариям — очень приятная и жизнерадостная учительница. Она много улыбается и делится мемами, благодаря чему уроки становятся веселее 😊. Она выбирает темы, которые соответствуют вашим интересам, поэтому на её уроках всегда комфортно. Учиться с ней — большое удовольствие!',
+    text: 'Мариям очень приятная и жизнерадостная учительница. Она много улыбается и делится мемами, благодаря чему уроки становятся веселее 😊. Она выбирает темы, которые соответствуют вашим интересам, поэтому на её уроках всегда комфортно. Учиться с ней — большое удовольствие!',
     original: `Mariyam is a very pleasant and cheerful teacher. She smiles a lot and shares memes, which makes the lessons more fun😊. She chooses topics that match your interests, so her lessons are always comfortable. Learning with her is a very enjoyable experience!`,
   },
   {
@@ -970,9 +975,9 @@ function Pricing() {
 
       <p className="fineprint">
         <span className="np">а если не подойдёт?</span> вернем деньги за неиспользованные занятия в течение 14 дней · подробнее в{' '}
-<a href={TERMS_URL} style={{ textDecoration: 'underline' }}>
-  условиях обучения
-</a>
+        <a href={TERMS_URL} style={{ textDecoration: 'underline' }}>
+          условиях обучения
+        </a>
       </p>
     </section>
   );
@@ -987,22 +992,22 @@ const FAQ = [
   { q: 'Что за предложение Founder для 6 студентов?', a: 'Я запускаю приложение, поэтому первым 6 студентам предлагаю особую цену: вы становитесь основателями. Пакет из минимум 8 занятий по £25 вместо £30. Эта цена фиксируется на 365 дней со дня оплаты. Чтобы её активировать, нужен промокод, который я отправлю при регистрации.' },
   { q: 'Как проходят занятия?', a: 'Онлайн в Zoom, по 50 минут.' },
   {
-  q: 'Как записаться на занятие?',
-  a: (
-    <>
-      Через{' '}
-      <a
-        href={CALENDLY_URL}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ textDecoration: 'underline' }}
-      >
-        Calendly
-      </a>
-      . Перенести или отменить занятие можно там же, либо договориться со мной в WhatsApp или Telegram. После оплаты можно закрепить за собой постоянное время в моём расписании.
-    </>
-  ),
-},
+    q: 'Как записаться на занятие?',
+    a: (
+      <>
+        Через{' '}
+        <a
+          href={CALENDLY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'underline' }}
+        >
+          Calendly
+        </a>
+        . Перенести или отменить занятие можно там же, либо договориться со мной в WhatsApp или Telegram. После оплаты можно закрепить за собой постоянное время в моём расписании.
+      </>
+    ),
+  },
   { q: 'Как долго действует пакет?', a: '28 дней с даты оплаты. Неиспользованные занятия после этого сгорают.' },
   { q: 'Можно ли перенести неиспользованные занятия в следующий пакет?', a: 'Да, частично. Если ты оплачиваешь следующий пакет в последний день действия текущего, 50% неиспользованных занятий переходят в новый пакет. Для этого не должно быть задолженностей.' },
   { q: 'Можно ли заморозить пакет?', a: 'Да, один раз за пакет, до 7 календарных дней. Срок действия пакета продлевается на дни заморозки, а занятия в это время не проводятся и не списываются.' },
@@ -1012,15 +1017,16 @@ const FAQ = [
     a: (
       <>
         Да. В течение 14 дней со дня оплаты первого пакета можно вернуть деньги за неиспользованные занятия. Проведённые занятия не возвращаются. Подробнее в{' '}
-<a href={TERMS_URL} style={{ textDecoration: 'underline' }}>
-  Условиях обучения
-</a>
-.
+        <a href={TERMS_URL} style={{ textDecoration: 'underline' }}>
+          Условиях обучения
+        </a>
+        .
       </>
     ),
   },
-  { q: 'Я плачу не в фунтах. Что с курсом? Можно ли платить в рублях?', a: 'Цена указана в фунтах. Если ты платишь в другой валюте, сумма конвертируется в фунты по курсу Google на день оплаты, и количество занятий в пакете фиксируется. Способ оплаты: перевод на карту в рублях.' },
-  { q: 'Что значит Loam?', a: 'Loam переводится «чернозем», плодородная почва, в которой хорошо растет все живое. Это как в изучении английского. Ты сажаешь семена слов и ухаживаешь за ними, чтобы со временем вырос целый сад. Так устроена карта слов в приложении.' },
+  { q: 'Я плачу не в фунтах. Что с курсом? Можно ли платить в рублях?', a: 'Цена указана в фунтах. Если ты платишь в другой валюте, сумма конвертируется в фунты по курсу Google на день оплаты, и количество занятий в пакете фиксируется. Способ оплаты в рублях: перевод на карту в рублях.' },
+  { q: 'Можно ли записать детей на занятия?', a: 'Нет, сейчас ведется набор студентов только 18+'},
+  { q: 'Что значит Loam?', a: 'Loam - это древнеанглийское слово, переводится «чернозем», плодородная почва, в которой хорошо растет все живое. Это как в изучении английского. Ты сажаешь семена слов и ухаживаешь за ними, чтобы со временем вырос целый сад. Так устроена карта слов в приложении.' },
 ];
 
 function Faq() {
@@ -1067,7 +1073,7 @@ const QUESTIONS = [
   ['p-blue', 'что ты ешь на завтрак'],
   ['p-purple', 'веришь ли ты в инопланетян'],
   ['p-sand', 'ананас на пицце: за или против'],
-  ['p-sand', 'кофе с каким молоком ты заказываешь'],
+  ['p-green', 'кофе с каким молоком ты заказываешь'],
   ['p-blue', 'тапочки или босиком'],
 ];
 
@@ -1122,31 +1128,42 @@ function About() {
 
       <p className="about-reveal">Этим человеком буду я, твой репетитор английского.</p>
 
-      <div className="video" id="video">
-        {playing ? (
-          <iframe
-            src={'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(VIDEO_ID) + '?autoplay=1&rel=0'}
-            title="Знакомство с Мариам"
-            allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-            allowFullScreen
-          />
-        ) : (
-          <button className="video-play" type="button" aria-label="Смотреть видео" onClick={play}>
-            <span className="btn">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" />
-              </svg>
-            </span>
-            <span className="cap">{videoCaption}</span>
-          </button>
-        )}
+      {/* text on the left, square video on the right (same size as the hex map) */}
+      <div className="about-intro">
+        <div className="about-bio">
+          <p>Я Мариам! Английский открыл мне столько дверей и просто открыл совершенно другой, глобальный масштаб.</p>
+          <p>Этот мир может открыться и тебе! В центре моих уроков находишься ты и то, как твоя личность может найти место и обитать внутри языка. Чтобы все видели и слышали, как ты проявляешься на английском.</p>
+          <p>В 2008 году я выиграла стипендию и уехала учиться в США, где прожила до 2015 года. Школу закончила в Калифорнии, а потом 4 года училась в университете Purdue. После 6 лет работы корпоративным тренером я переехала в мою любовь, Лондон, где училась в театральной школе.</p>
+          <p>Мой подход к обучению: синтез личного опыта, бесконечной жизни из чемодана, подработок в лондонских пабах, волонтерства в хостелах Бангкока, подслушанных разговоров в Стамбуле, и, конечно, актёрского мастерства.</p>
+          
+        </div>
+
+        <div className="video" id="video">
+          {playing ? (
+            <iframe
+              src={'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(VIDEO_ID) + '?autoplay=1&rel=0'}
+              title="Знакомство с Мариам"
+              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+              allowFullScreen
+            />
+          ) : (
+            <button className="video-play" type="button" aria-label="Смотреть видео" onClick={play}>
+              <span className="btn">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" />
+                </svg>
+              </span>
+              <span className="cap">{videoCaption}</span>
+            </button>
+          )}
+        </div>
       </div>
     </section>
   );
 }
 
 /* ================================================================
-   Newsletter
+   Newsletter (Solo Mode) + teacher's quote underneath
    ================================================================ */
 function Newsletter() {
   const inputRef = useRef(null);
@@ -1211,9 +1228,26 @@ function Newsletter() {
           )}
         </div>
       </div>
+
+            <figure className="quote">
+        <blockquote lang="en">We're all on our individual journeys. It's a privilege to be a part of yours.</blockquote>
+        <p className="quote-ru">Мы все идём своим путём. Для меня большая честь быть частью твоего.</p>
+        <figcaption>мой учитель актёрского мастерства</figcaption>
+      </figure>
+
+      <p className="questions">
+        Остались вопросы?{' '}
+        <a
+          href={CONTACT_URL_FOOTER}
+          style={{ textDecoration: 'underline', color: 'inherit' }}
+        >
+          Напиши мне
+        </a>
+      </p>
     </section>
   );
 }
+
 
 /* ================================================================
    Page
@@ -1313,8 +1347,8 @@ export default function Home() {
         <div className="footer-inner">
           <span className="footer-copy">© Loam 2026</span>
           <nav className="footer-links" aria-label="Документы и контакты">
-           <a href={TERMS_URL}>Условия обучения</a>
-<a href={PRIVACY_URL}>Политика конфиденциальности</a>
+            <a href={TERMS_URL}>Условия обучения</a>
+            <a href={PRIVACY_URL}>Политика конфиденциальности</a>
             <a href={CONTACT_URL_FOOTER}>Cвязаться с нами</a>
           </nav>
         </div>

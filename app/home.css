@@ -1361,3 +1361,81 @@
     .news { padding: 0 20px 88px; }
     .news-card { grid-template-columns: 1fr; gap: 28px; padding: 28px 24px; border-radius: 24px; }
   }
+
+  /* ================================================================
+   v9: paste this at the very BOTTOM of app/home.css.
+   Nothing above it is deleted; these rules win because they come last.
+   ================================================================ */
+
+/* ---------- About me: text left, square video right ---------- */
+.about-intro {
+  margin-top: 72px;
+  width: 100%;
+  max-width: 1080px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;   /* same grid as the hex map section */
+  gap: 72px;
+  align-items: center;
+}
+
+.about-bio p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--ink-soft);
+}
+.about-bio p + p { margin-top: 18px; }
+
+/* the video becomes a square, the same size as .hexview */
+.about-intro .video {
+  margin-top: 0;
+  max-width: none;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 28px;
+}
+
+@media (max-width: 860px) {
+  .about-intro {
+    grid-template-columns: 1fr;
+    max-width: 520px;
+    margin-top: 56px;
+    gap: 36px;
+  }
+  .about-intro .video { border-radius: 24px; }
+}
+
+/* ---------- Teacher's quote under the Solo Mode card ---------- */
+.news {
+  flex-direction: column;
+  align-items: center;
+  gap: 72px;
+}
+
+.quote {
+  max-width: 640px;
+  text-align: center;
+}
+.quote blockquote {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+.quote-ru {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.quote figcaption {
+  margin-top: 18px;
+  font-size: 13px;
+  letter-spacing: 0.02em;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 860px) {
+  .news { gap: 56px; }
+}
