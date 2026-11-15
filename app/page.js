@@ -1170,18 +1170,39 @@ function Newsletter() {
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
   const [done, setDone] = useState(false);
+  const [sending, setSending] = useState(false);
 
-  function submit(e) {
+  async function submit(e) {
     e.preventDefault();
+    if (sending) return;
+
     const v = email.trim();
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) {
       setError('Проверь адрес: похоже, в нём опечатка.');
       if (inputRef.current) inputRef.current.focus();
       return;
     }
+
     setError('');
-    /* TODO: send v to the email tool (Loops) here. Right now nothing is sent. */
-    setDone(true);
+    setSending(true);
+
+    try {
+      const res = await fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: v }),
+      });
+
+      if (res.ok) {
+        setDone(true);
+      } else {
+        setError('Не получилось подписаться. Попробуй ещё раз чуть позже.');
+      }
+    } catch {
+      setError('Нет соединения. Проверь интернет и попробуй ещё раз.');
+    } finally {
+      setSending(false);
+    }
   }
 
   return (
@@ -1216,7 +1237,7 @@ function Newsletter() {
                   onChange={(e) => setEmail(e.target.value)}
                   aria-invalid={error ? 'true' : undefined}
                 />
-                <button type="submit">подписаться</button>
+                <button type="submit" disabled={sending}>{sending ? 'отправляю…' : 'подписаться'}</button>
               </div>
               <p className="news-error" role="alert">{error}</p>
               <p className="news-note">
@@ -1224,7 +1245,7 @@ function Newsletter() {
               </p>
             </form>
           ) : (
-            <p className="news-done">Спасибо, ты в списке.</p>
+            <p className="news-done">Спасибо, ты в списке. 🌱</p>
           )}
         </div>
       </div>
@@ -1306,7 +1327,7 @@ export default function Home() {
           </article>
         </div>
 
-        <p className="takeaway">Это два разных навыка: узнать слово и произнести его самому. На занятиях мы тренируем второй. Мы учимся разговаривать свободно в любой ситуации, как носитель.</p>
+        <p className="takeaway">Это два разных навыка: узнать слово и произнести его самостоятельно. На занятиях мы тренируем второй. Мы учимся разговаривать свободно в любой ситуации, как носитель.</p>
       </section>
 
       <section className="method" id="method">

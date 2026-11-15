@@ -31,7 +31,7 @@ export async function POST(request) {
     },
     body: JSON.stringify({
       email,
-      source: "loam-lead-gen-website",
+      source: "lead-gen site",
       subscribed: true,
       mailingLists: { [listId]: true },
     }),
