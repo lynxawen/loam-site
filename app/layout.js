@@ -1,5 +1,6 @@
-import { SITE_URL } from "./config";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
+import { SITE_URL } from "./config";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -12,9 +13,9 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const title = "Loam - английский, который получается сказать вслух";
+const title = "Репетитор английского онлайн для разговорной речи | Loam";
 const description =
-  "Индивидуальные занятия английским с упором на живую речь: ты запоминаешь и используешь слова, которые реально произносишь вслух. Начни разговаривать сегодня.";
+  "Занятия английским онлайн в Zoom с Мариам: говоришь с первой минуты, а мы отслеживаем слова, которые ты произносишь сам. Пробный урок бесплатно.";
 
 export const metadata = {
   metadataBase: new URL(SITE_URL),
@@ -37,7 +38,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="ru" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
