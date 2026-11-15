@@ -583,14 +583,14 @@ const REVIEWS = [
     original: `I am working with Mariyam to improve my academic English. She is a great teacher of the language needed at university, at conferences, in academic papers. She is incredibly creative and very knowledgeable. What is particularly important to me, Mariyam cares about the correctness, appropriateness and elegance of the language. Never before has English given me so much satisfaction. I am finally moving forward!`,
   },
   {
-    name: 'Кристина', country: 'Украина',
-    text: 'Мне очень понравились занятия с Мариям. С ней легко разговаривать, а наши беседы охватывали самые разные темы, от повседневной жизни до более глубоких обсуждений. Больше всего я ценила то, что она часто делилась естественными выражениями, которыми пользуются носители языка, и помогала мне говорить увереннее. Если вы ищете разговорную практику с обратной связью в реальном времени, уроки Мариям вам отлично подойдут. Думаю, они особенно полезны для развития речи и расширения словарного запаса в спокойной, дружелюбной атмосфере.',
-    original: `I’ve really enjoyed my lessons with Mariyam. She’s easy to talk to, and our conversations covered a wide range of topics, from everyday life to deeper discussions. One of the things I appreciated most was that she often shared natural, native-like expressions and helped me sound more confident. If you’re looking for conversational practice with real-time feedback, Mariam’s lessons are a great fit. I think they’re especially useful for improving your speaking skills and expanding your vocabulary in a relaxed, friendly way.`,
-  },
-  {
     name: 'Джакопо', country: 'Италия',
     text: 'Найти увлечённого, преданного делу и компетентного преподавателя - большая редкость. Занятия подстраиваются под ваши конкретные потребности и уровень, но самое главное она очень инициативна и прекрасно организована. Лучшего я и желать не мог!',
     original: `Finding a passionate, dedicated, and competent teacher is rare. Classes are tailored to your specific needs and skill level, but most importantly, she is extremely proactive and well-organized. I couldn't have asked for better!`,
+  },
+  {
+    name: 'Кристина', country: 'Украина',
+    text: 'Мне очень понравились занятия с Мариям. С ней легко разговаривать, а наши беседы охватывали самые разные темы, от повседневной жизни до более глубоких обсуждений. Больше всего я ценила то, что она часто делилась естественными выражениями, которыми пользуются носители языка, и помогала мне говорить увереннее. Если вы ищете разговорную практику с обратной связью в реальном времени, уроки Мариям вам отлично подойдут. Думаю, они особенно полезны для развития речи и расширения словарного запаса в спокойной, дружелюбной атмосфере.',
+    original: `I’ve really enjoyed my lessons with Mariyam. She’s easy to talk to, and our conversations covered a wide range of topics, from everyday life to deeper discussions. One of the things I appreciated most was that she often shared natural, native-like expressions and helped me sound more confident. If you’re looking for conversational practice with real-time feedback, Mariam’s lessons are a great fit. I think they’re especially useful for improving your speaking skills and expanding your vocabulary in a relaxed, friendly way.`,
   },
   {
     name: 'Инес', country: 'Испания',
@@ -1024,9 +1024,9 @@ const FAQ = [
       </>
     ),
   },
-  { q: 'Я плачу не в фунтах. Что с курсом? Можно ли платить в рублях?', a: 'Цена указана в фунтах. Если ты платишь в другой валюте, сумма конвертируется в фунты по курсу Google на день оплаты, и количество занятий в пакете фиксируется. Способ оплаты в рублях: перевод на карту в рублях.' },
-  { q: 'Можно ли записать детей на занятия?', a: 'Нет, сейчас ведется набор студентов только 18+'},
-  { q: 'Что значит Loam?', a: 'Loam - это древнеанглийское слово, переводится «чернозем», плодородная почва, в которой хорошо растет все живое. Это как в изучении английского. Ты сажаешь семена слов и ухаживаешь за ними, чтобы со временем вырос целый сад. Так устроена карта слов в приложении.' },
+  { q: 'Я плачу не в фунтах. Что с курсом? Можно ли платить в рублях?', a: 'Если ты платишь в другой валюте, сумма конвертируется в фунты по курсу на Google на день оплаты. Способ оплаты в рублях: перевод на карту в рублях.' },
+  { q: 'Можно ли записать детей на занятия?', a: 'Нет, сейчас ведется набор студентов только 18+.'},
+  { q: 'Что значит Loam?', a: 'Loam - это древнеанглийское слово, переводится «чернозем», плодородная почва, в которой хорошо растет все живое. Это как в изучении английского. Ты сажаешь семена слов и ухаживаешь за ними, чтобы со временем вырос целый сад. Так устроена карта слов в приложении. 🌱' },
 ];
 
 function Faq() {
@@ -1133,7 +1133,7 @@ function About() {
         <div className="about-bio">
           <p>Я Мариам! Английский открыл мне столько дверей и просто открыл совершенно другой, глобальный масштаб.</p>
           <p>Этот мир может открыться и тебе! В центре моих уроков находишься ты и то, как твоя личность может найти место и обитать внутри языка. Чтобы все видели и слышали, как ты проявляешься на английском.</p>
-          <p>В 2008 году я выиграла стипендию и уехала учиться в США, где прожила до 2015 года. Школу закончила в Калифорнии, а потом 4 года училась в университете Purdue. После 6 лет работы корпоративным тренером я переехала в мою любовь, Лондон, где училась в театральной школе.</p>
+          <p>В 2008 году я выиграла стипендию и уехала учиться в США. Школу закончила в Калифорнии, а потом 4 года училась в университете Purdue. После 6 лет работы корпоративным тренером я переехала в мою любовь, Лондон, где училась в театральной школе.</p>
           <p>Мой подход к обучению: синтез личного опыта, бесконечной жизни из чемодана, подработок в лондонских пабах, волонтерства в хостелах Бангкока, подслушанных разговоров в Стамбуле, и, конечно, актёрского мастерства.</p>
           
         </div>
