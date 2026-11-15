@@ -2,8 +2,6 @@
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import './home.css';
-import Link from "next/link";
-import { CALENDLY_TRIAL_URL as CALENDLY } from "./config";
 
 /* ================================================================
    Things you edit by hand
