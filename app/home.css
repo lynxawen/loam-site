@@ -1463,3 +1463,14 @@
 .video-play,
 .video-play:focus-visible { border-radius: 50%; }
 .video-play .cap { bottom: 12%; }
+
+.video-poster {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.04);
+}
+.video-play .btn { position: relative; z-index: 1; }
+.video-play .cap { color: #FFFFFF; text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4); }

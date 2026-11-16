@@ -15,6 +15,7 @@ const CONTACT_URL_FOOTER = mailto('У меня вопрос');        // footer 
 const PRIVACY_URL = '/privacy';
 const TERMS_URL = '/terms';
 const VIDEO_SRC = '/intro.mp4';
+const VIDEO_POSTER = '/intro-poster.jpg';
 const FOUNDER_TOTAL = 6;         // places in the Founder offer
 const FOUNDER_TAKEN = 1;         // how many students have already joined
 
@@ -1146,6 +1147,7 @@ function play() {
 />
           ) : (
             <button className="video-play" type="button" aria-label="Смотреть видео" onClick={play}>
+              <img className="video-poster" src={VIDEO_POSTER} alt="" />
               <span className="btn">
                 <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                   <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" />
