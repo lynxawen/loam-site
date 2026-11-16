@@ -19,7 +19,7 @@ export default function PrivacyPage() {
         <h1>Политика конфиденциальности Loam</h1>
 
         <p className={styles.updated}>
-          <strong>Последнее обновление:</strong> 9 ноября 2026 года
+          <strong>Последнее обновление:</strong> 15 ноября 2026 года
         </p>
 
         {/* 1 */}

@@ -17,7 +17,7 @@ export default function TermsPage() {
         <h1>Условия и положения оказания услуг</h1>
 
          <p className={styles.updated}>
-          <strong>Последнее обновление:</strong> 15 ноября 2026 года
+          <strong>Последнее обновление:</strong> 16 ноября 2026 года
         </p>
 
         <p>Loam — приложение для занятий английским языком.</p>
