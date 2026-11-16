@@ -570,7 +570,11 @@ const REVIEWS = [
     name: 'Екатерина', country: 'Россия',
     text: 'Мне нравятся занятия с Мариам тем, что она легко и бережно преподносит информацию. Огромный плюс, что она понимает Русскую культуру и культуру англоязычных стран. Я начала учить Английский язык еще в школе, потом начала в колледже и вновь начала в институте… какие-То знания безусловно были, но в них не было системы и были огромные дыры на базовом уровне. Так же сложность вызывали артикли и предлоги не характерные Русскому языку. Вот с этим собственно я и пришла к Мариам, и с желанием наконец-то начать говорить и с мечтой переехать заграницу) Я точно рекомендую занятия с Мариам, если вы хотите наконец перестать бояться и начать говорить на Английском!!!',
   },
-  
+  {
+    name: 'Джакопо', country: 'Италия',
+    text: 'Найти увлечённого, преданного делу и компетентного преподавателя - большая редкость. Занятия подстраиваются под ваши конкретные потребности и уровень, но самое главное она очень инициативна и прекрасно организована. Лучшего я и желать не мог!',
+    original: `Finding a passionate, dedicated, and competent teacher is rare. Classes are tailored to your specific needs and skill level, but most importantly, she is extremely proactive and well-organized. I couldn't have asked for better!`,
+  },
   {
     name: 'Алиса', country: 'Португалия',
     text: 'Мариям - лучший преподаватель, которого я когда-либо встречала! Она внимательно прислушивается к потребностям учеников, предлагает продуманный план урока и находит индивидуальный подход. На её занятиях всегда комфортная и поддерживающая атмосфера, которая пробуждает желание учиться и расти. Благодаря её поддержке и профессионализму я чувствую себя увереннее в своих знаниях. Кроме того, её позитивная энергия и отличное чувство юмора делают каждый урок увлекательным и вдохновляющим. Я с нетерпением жду каждого занятия! Спасибо, Мариям!',
@@ -581,21 +585,17 @@ const REVIEWS = [
     text: 'Я занимаюсь с Мариям, чтобы улучшить свой академический английский. Она прекрасный преподаватель языка, необходимого в университете, на конференциях и в научных статьях. Она невероятно креативна и очень эрудирована. Особенно важно для меня то, что Мариям заботится о правильности, уместности и изяществе языка. Никогда прежде английский не приносил мне столько удовлетворения. Наконец-то я двигаюсь вперёд!',
     original: `I am working with Mariyam to improve my academic English. She is a great teacher of the language needed at university, at conferences, in academic papers. She is incredibly creative and very knowledgeable. What is particularly important to me, Mariyam cares about the correctness, appropriateness and elegance of the language. Never before has English given me so much satisfaction. I am finally moving forward!`,
   },
-  {
-    name: 'Джакопо', country: 'Италия',
-    text: 'Найти увлечённого, преданного делу и компетентного преподавателя - большая редкость. Занятия подстраиваются под ваши конкретные потребности и уровень, но самое главное она очень инициативна и прекрасно организована. Лучшего я и желать не мог!',
-    original: `Finding a passionate, dedicated, and competent teacher is rare. Classes are tailored to your specific needs and skill level, but most importantly, she is extremely proactive and well-organized. I couldn't have asked for better!`,
+ {
+    name: 'Инес', country: 'Испания',
+    text: 'Я занимаюсь с Мариям уже полгода, и благодаря ей мой уровень английского вырос. Её уроки всегда увлекательные: мы говорим на интересные темы, и она последовательно исправляет мои ошибки так, что это действительно помогает. Она также даёт отличные советы о том, как и дальше улучшать грамматику и словарный запас. Мариям весёлая, очень организованная и по-настоящему предана своим ученикам. Я на 100% рекомендую её всем, кто хочет добиться реального прогресса в английском.',
+    original: `I’ve been taking lessons with Mariyam for six months, and thanks to her, I’ve improved my English level. Her classes are always engaging. We talk about interesting topics, and she corrects me consistently in a helpful way. She also gives great advice on how to keep improving my grammar and vocabulary. Mariyam is fun, very organized, and truly committed to her students. I would 100% recommend her to anyone who wants to make real progress in English.`,
   },
   {
     name: 'Кристина', country: 'Украина',
     text: 'Мне очень понравились занятия с Мариям. С ней легко разговаривать, а наши беседы охватывали самые разные темы, от повседневной жизни до более глубоких обсуждений. Больше всего я ценила то, что она часто делилась естественными выражениями, которыми пользуются носители языка, и помогала мне говорить увереннее. Если вы ищете разговорную практику с обратной связью в реальном времени, уроки Мариям вам отлично подойдут. Думаю, они особенно полезны для развития речи и расширения словарного запаса в спокойной, дружелюбной атмосфере.',
     original: `I’ve really enjoyed my lessons with Mariyam. She’s easy to talk to, and our conversations covered a wide range of topics, from everyday life to deeper discussions. One of the things I appreciated most was that she often shared natural, native-like expressions and helped me sound more confident. If you’re looking for conversational practice with real-time feedback, Mariam’s lessons are a great fit. I think they’re especially useful for improving your speaking skills and expanding your vocabulary in a relaxed, friendly way.`,
   },
-  {
-    name: 'Инес', country: 'Испания',
-    text: 'Я занимаюсь с Мариям уже полгода, и благодаря ей мой уровень английского вырос. Её уроки всегда увлекательные: мы говорим на интересные темы, и она последовательно исправляет мои ошибки так, что это действительно помогает. Она также даёт отличные советы о том, как и дальше улучшать грамматику и словарный запас. Мариям весёлая, очень организованная и по-настоящему предана своим ученикам. Я на 100% рекомендую её всем, кто хочет добиться реального прогресса в английском.',
-    original: `I’ve been taking lessons with Mariyam for six months, and thanks to her, I’ve improved my English level. Her classes are always engaging. We talk about interesting topics, and she corrects me consistently in a helpful way. She also gives great advice on how to keep improving my grammar and vocabulary. Mariyam is fun, very organized, and truly committed to her students. I would 100% recommend her to anyone who wants to make real progress in English.`,
-  },
+
   {
     name: 'Озде', country: 'Турция',
     text: 'У Мариям прекрасная энергетика, и она очень мотивирует на прогресс. Занятия с ней доставляют огромное удовольствие, как будто болтаешь с подругой.',
@@ -1127,7 +1127,7 @@ function play() {
         <div className="about-bio">
           <p>Я Мариам! Английский открыл мне столько дверей и просто открыл совершенно другой, глобальный масштаб.</p>
           <p>Этот мир может открыться и тебе! В центре моих уроков находишься ты и то, как твоя личность может найти место и обитать внутри языка. Чтобы все видели и слышали, как ты проявляешься на английском.</p>
-          <p>В 2008 году я выиграла стипендию и уехала учиться в США. Школу закончила в Калифорнии, а потом 4 года училась в университете Purdue. После 6 лет работы корпоративным тренером я переехала в мою любовь, Лондон, где училась в театральной школе.</p>
+          <p>В 2008 году я выиграла стипендию и уехала учиться в США. Школу закончила в Калифорнии, а потом 4 года училась на бакалавре в университете Purdue в Индиане. После 6 лет работы корпоративным тренером я переехала в мою любовь, Лондон, где училась в театральной школе.</p>
           <p>Мой подход к обучению: синтез личного опыта, бесконечной жизни из чемодана, подработок в лондонских пабах, волонтерства в хостелах Бангкока, подслушанных разговоров в Стамбуле, и, конечно, актёрского мастерства.</p>
           
         </div>
