@@ -17,7 +17,7 @@ const TERMS_URL = '/terms';
 const VIDEO_SRC = '/intro.mp4';
 const VIDEO_POSTER = '/intro-poster.jpg';
 const FOUNDER_TOTAL = 6;         // places in the Founder offer
-const FOUNDER_TAKEN = 2;         // how many students have already joined
+const FOUNDER_TAKEN = 3;         // how many students have already joined
 
 const FACTS = '50 минут · бесплатно · без обязательств · приложение включено';
 
