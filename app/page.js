@@ -14,7 +14,7 @@ const CONTACT_URL = mailto('Хочу заниматься английским C
 const CONTACT_URL_FOOTER = mailto('У меня вопрос');        // footer link
 const PRIVACY_URL = '/privacy';
 const TERMS_URL = '/terms';
-const VIDEO_ID = 'YOUTUBE_VIDEO_ID'; // TODO: the part after v= in the YouTube link
+const VIDEO_SRC = '/intro.mp4';
 const FOUNDER_TOTAL = 6;         // places in the Founder offer
 const FOUNDER_TAKEN = 1;         // how many students have already joined
 
@@ -1079,7 +1079,6 @@ function About() {
   const cloudRef = useRef(null);
   const [cloudIn, setCloudIn] = useState(false);
   const [playing, setPlaying] = useState(false);
-  const [videoCaption, setVideoCaption] = useState('Познакомься со мной');
 
   /* question pills appear one after another when the cloud comes into view */
   useEffect(() => {
@@ -1100,14 +1099,10 @@ function About() {
     return () => io.disconnect();
   }, []);
 
-  /* YouTube loads only after a click (no tracking before that) */
-  function play() {
-    if (!VIDEO_ID || VIDEO_ID === 'YOUTUBE_VIDEO_ID') {
-      setVideoCaption('Здесь появится видео');
-      return;
-    }
-    setPlaying(true);
-  }
+  /* the video file loads only after a click */
+function play() {
+  setPlaying(true);
+}
 
   return (
     <section className="about" id="about">
@@ -1138,12 +1133,17 @@ function About() {
 
         <div className="video" id="video">
           {playing ? (
-            <iframe
-              src={'https://www.youtube-nocookie.com/embed/' + encodeURIComponent(VIDEO_ID) + '?autoplay=1&rel=0'}
-              title="Знакомство с Мариам"
-              allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
-              allowFullScreen
-            />
+            <video
+  src={VIDEO_SRC}
+  title="Привет!"
+  autoPlay
+  playsInline
+  onClick={(e) => {
+    const v = e.currentTarget;
+    if (v.paused) v.play();
+    else v.pause();
+  }}
+/>
           ) : (
             <button className="video-play" type="button" aria-label="Смотреть видео" onClick={play}>
               <span className="btn">
@@ -1151,7 +1151,7 @@ function About() {
                   <path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z" />
                 </svg>
               </span>
-              <span className="cap">{videoCaption}</span>
+              <span className="cap">{"Давай знакомиться!"}</span>
             </button>
           )}
         </div>
